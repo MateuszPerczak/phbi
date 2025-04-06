@@ -1,8 +1,7 @@
 import { css, Global, type Theme, useTheme } from "@emotion/react";
-import type { FC } from "react";
 import { memo } from "react";
 
-export const GlobalStyle: FC = memo((): JSX.Element => {
+export const GlobalStyle = memo((): JSX.Element => {
   const { background, color }: Theme = useTheme();
 
   return (
@@ -15,6 +14,12 @@ export const GlobalStyle: FC = memo((): JSX.Element => {
           margin: 0;
           padding: 0;
         }
+        button,
+        a {
+          &:focus-visible {
+            outline: 2px solid #fff;
+          }
+        }
         html,
         body {
           height: 100%;
@@ -22,16 +27,17 @@ export const GlobalStyle: FC = memo((): JSX.Element => {
         }
         body {
           display: flex;
+          font-family: "Poppins", sans-serif;
           flex-direction: column;
           background: ${background};
           color: ${color};
-          user-select: none;
+          font-optical-sizing: auto;
+          font-style: normal;
         }
         #root {
           display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
+          flex-direction: column;
+          flex: 1;
         }
       `}
     />

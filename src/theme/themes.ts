@@ -10,10 +10,10 @@ type Themes = Record<ColorThemes, Theme>;
 const themes: Themes = {
   light: {
     background: "#fff",
-    color: "#000",
+    color: "#1a1a1a",
   },
   dark: {
-    background: "#000",
+    background: "#535663",
     color: "#fff",
   },
 };

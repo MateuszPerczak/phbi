@@ -1,8 +1,18 @@
+import { GlobalStyle } from "@components/globalStyle/GlobalStyle";
 import { ThemeProvider } from "@emotion/react";
 import { useTheme } from "@hooks/index";
-import type { FC, PropsWithChildren } from "react";
+import { router } from "@routes/routes";
+import { domAnimation, LazyMotion } from "framer-motion";
+import { RouterProvider } from "react-router-dom";
 
-export const AppProvider: FC<PropsWithChildren> = ({ children }): JSX.Element => {
+export const AppProvider = (): JSX.Element => {
   const theme = useTheme();
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <LazyMotion features={domAnimation} strict>
+        <RouterProvider router={router} />
+      </LazyMotion>
+    </ThemeProvider>
+  );
 };

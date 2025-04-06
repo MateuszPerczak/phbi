@@ -1,11 +1,15 @@
-import type { FC } from "react";
+import { AnimatedOutlet, Nav } from "@components/index";
+import { Suspense } from "react";
+import { ScrollRestoration } from "react-router-dom";
 
-import { AppContent, AppProvider } from "..";
-
-export const App: FC = (): JSX.Element => {
+export const App = (): JSX.Element => {
   return (
-    <AppProvider>
-      <AppContent />
-    </AppProvider>
+    <>
+      <ScrollRestoration />
+      <Nav />
+      <Suspense fallback={<>Loader</>}>
+        <AnimatedOutlet />
+      </Suspense>
+    </>
   );
 };
