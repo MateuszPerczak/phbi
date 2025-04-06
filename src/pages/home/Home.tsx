@@ -1,3 +1,5 @@
+import { StyledHome } from "./Home.styles";
+
 export const Home = (): JSX.Element => {
-  return <div>Home</div>;
+  return <StyledHome>Strona w budowie</StyledHome>;
 };

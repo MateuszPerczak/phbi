@@ -7,10 +7,10 @@ export const Nav = (): JSX.Element => {
       <div className="nav-wrapper">
         <NavLogo />
         <div className="nav-links">
-          <NavItem label="Oferta" />
+          {/* <NavItem label="Oferta" />
           <NavItem label="O nas" />
           <NavItem label="Strefa wiedzy" />
-          <NavItem label="Kontakt" />
+          <NavItem label="Kontakt" /> */}
           {/* <NavHamburger /> */}
         </div>
       </div>
