@@ -1,0 +1,1 @@
+import{c as e,j as t}from"./index-552eeba8.js";const n=e("section",{target:"e1t9by400"})({name:"b6p2lc",styles:"display:flex;flex:1;align-items:center;justify-content:center;font-size:4rem;font-weight:700"}),r=()=>t(n,{children:"Strona w budowie"});export{r as Home};
